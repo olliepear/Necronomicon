@@ -44,6 +44,7 @@ public class Robot extends TimedRobot {
   public void teleopInit()
   {
     RobotContainer.tankDrive.schedule();
+    RobotContainer.bookControl.schedule();
   }
 
   /** This function is called periodically during teleoperated mode. */

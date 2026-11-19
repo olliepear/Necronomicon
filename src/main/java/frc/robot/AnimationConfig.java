@@ -22,7 +22,7 @@ public class AnimationConfig {
 
         public double CloseFrame(int keyFrame) {
             
-            if (keyFrame == 0) {return -1.0;}
+            if (keyFrame == 0) {return 1.0;}
             else if (keyFrame == 1) {return 0;}
 
 

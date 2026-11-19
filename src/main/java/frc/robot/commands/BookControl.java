@@ -28,8 +28,8 @@ public class BookControl extends Command{
     @Override
     public void initialize() {
 		bookController.set(0);
-        if (angle >= 180) {status = 4;}
-        if (angle <= 0) {status = 1;}
+        if (angle >= (180-Constants.BookConstants.kEncoderDeadzone)) {status = 4;}
+        if (angle <= Constants.BookConstants.kEncoderDeadzone) {status = 1;}
     }
 
     @Override
@@ -43,7 +43,7 @@ public class BookControl extends Command{
         }
 
         if (status == 3) {
-            if (angle >= 180) {
+            if (angle >= (180-Constants.BookConstants.kEncoderDeadzone)) {
                 status = 4;
                 done = true;
             }
@@ -52,7 +52,7 @@ public class BookControl extends Command{
             }
         }
         if (status == 2) {
-            if (angle >= 0) {
+            if (angle >= Constants.BookConstants.kEncoderDeadzone) {
                 status = 1;
                 done = true;
             }

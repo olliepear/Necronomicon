@@ -32,5 +32,6 @@ public final class Constants {
 
   public static class BookConstants {
     public static final int kBookMotor = 1;
+    public static final double kEncoderDeadzone = 0;
   }
 }
